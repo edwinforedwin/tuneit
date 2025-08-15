@@ -1,16 +1,20 @@
-.container {
+.flex {
     display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.container {
     flex-direction: column;
 }
 .top-bar {
     display: flex;
-    gap: 10rem;
-    justify-content: center;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    justify-content: space-between;
 }
 .font-fam {
     font-family: "Mozilla Headline", sans-serif;
+}
+img {
+    width: 100px;
 }
