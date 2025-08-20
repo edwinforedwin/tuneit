@@ -10,11 +10,14 @@
 .top-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border: 0.5px solid black;
+    border-radius: 14px;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 .font-fam {
     font-family: "Mozilla Headline", sans-serif;
-}
-img {
-    width: 50px;
 }
