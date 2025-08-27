@@ -17,7 +17,15 @@
     margin-right: 35%;
     padding-top: 1%;
     padding-bottom: 1%;
+    background: rgb(197, 197, 197);
 }
 .font-fam {
     font-family: "Mozilla Headline", sans-serif;
+}
+.content {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 4rem;
+    font-family: "Libertinus Serif Display", system-ui;
 }
