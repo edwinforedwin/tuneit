@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.banner {
+    font-size: 72px;
+    font-weight: bolder;
+    color: rgb(5, 67, 77);
+    margin-left: .5rem;
+}
+.subtitle {
+    margin-left: .5rem;
+}
+.font {
+    font-family: "TASA Explorer", sans-serif;
+}
+img {
+    object-fit: fill;
+    width: 100%;
+}
