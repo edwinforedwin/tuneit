@@ -1,6 +1,5 @@
-# Tuneit - Project Management Tool
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+# tuneitApp - Project Management Tool
+https://tuneitapp.com
 
 ## Project Contribution
 
