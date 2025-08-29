@@ -3,7 +3,7 @@
     justify-content: space-between;
     font-weight: bold;
     align-items: center;
-    margin: .75rem;
+    margin: 1rem;
 }
 .title {
     font-size: 24px;
@@ -21,7 +21,7 @@
 .access {
     display: flex;
     padding: 1rem;
-    box-shadow: rgba(6, 79, 90, 0.4) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
     border-radius: 14px;
     gap: 2rem;
 }

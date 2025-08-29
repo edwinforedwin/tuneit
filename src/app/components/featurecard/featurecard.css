@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    border-radius: 14px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: 1rem;
+    height: 420px;
+}
+img {
+    object-fit: fill;
+    width: 100%;
+}
+.font {
+    font-family: "TASA Explorer", sans-serif;
+}
+.title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+.subtitle {
+    font-size: 14px;
+    text-align: justify;
+}
+.flexclass {
+    display: flex;
+}

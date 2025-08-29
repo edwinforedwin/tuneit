@@ -2,10 +2,31 @@
     <div>
         <app-topbar></app-topbar>
     </div>
-    <div>
-        <div><img src="banner.jpg" alt=""></div>
-        <div class="banner font">Welcome to tuneitApp</div>
-        <div class="font subtitle">- Your project management tool that track and deliver on time</div>
+    <div class="content">
+        <div class="bannergroup">
+            <div class="bannercontent"><img src="scrum-board.png" alt=""></div>
+            <div class="bannercontent texts">
+                <div class="banner font bannercontent">Welcome to tuneitApp</div>
+                <div class="font subtitle"><i>Your project management tool that track and deliver on time</i></div>
+            </div>
+        </div>
+        <div class="font features">
+            Features
+        </div>
+        <div class="featurecard">
+            <div class="individualcard">
+                <app-featurecard title="Tracking" subtitle="All your projects can be tracked at one place to avoid multiple dependency. Also, project related meta-data can be managed easily using 'Master' feature" image="tracking.png"></app-featurecard>
+            </div>
+            <div class="individualcard">
+                <app-featurecard title="Resource Planning" subtitle="See all your resources at one place and assign and review tasks in a new and better way" image="people.png"></app-featurecard>
+            </div>
+            <div class="individualcard">
+                <app-featurecard title="Analytics" subtitle="Get a complete overview through analytics dashboard that have drill down as well to individual projects" image="analytics.png"></app-featurecard>
+            </div>
+            <div class="individualcard">
+                <app-featurecard title="Team Work" subtitle="Multiple teams can work together and activities can be monitored from a single point" image="teamwork.png"></app-featurecard>
+            </div>
+        </div>
     </div>
     <div>
         <app-footbar></app-footbar>
