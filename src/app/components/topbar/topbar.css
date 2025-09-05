@@ -55,3 +55,7 @@
 .hover-underline:hover::before {
   transform: scaleX(1);
 }
+a {
+  text-decoration: none;
+  color: black;
+}

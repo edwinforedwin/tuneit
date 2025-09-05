@@ -1,9 +1,8 @@
 .container {
     margin: .5rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .font {
     font-family: "TASA Explorer", sans-serif;
-    font-weight: bold;
 }
