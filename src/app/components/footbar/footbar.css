@@ -5,4 +5,10 @@
 }
 .font {
     font-family: "TASA Explorer", sans-serif;
+    font-size: .6rem;
+    font-weight: 600;
+}
+a {
+    text-decoration: none;
+    color: rgb(28, 86, 105);
 }
