@@ -2,13 +2,13 @@
     <div class="font title-font">Login to tuneitApp</div>
     <div class="input-area">
         <div>
-            <input type="text" class="font" placeholder="Username">
+            <input type="text" class="font" placeholder="Username" [(ngModel)]="email">
         </div>
         <div>
-            <input type="password" class="font" placeholder="Password">
+            <input type="password" class="font" placeholder="Password" [(ngModel)]="password">
         </div>
         <div>
-            <button class="font">Login</button>
+            <button class="font" (click)="login(email,password)">Login</button>
         </div>
     </div>
     <div class="font normal-font">
