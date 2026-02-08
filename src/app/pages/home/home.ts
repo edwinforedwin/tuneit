@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { Topbar } from "../../components/topbar/topbar";
-import { Footbar } from "../../components/footbar/footbar";
-import { Featurecard } from "../../components/featurecard/featurecard";
 
 @Component({
   selector: 'app-home',
-  imports: [Topbar, Footbar, Featurecard],
+  imports: [Topbar],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
