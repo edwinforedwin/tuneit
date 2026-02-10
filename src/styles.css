@@ -1,4 +1,8 @@
 @font-face {
+    font-family: "Google Sans";
+    src: url("../public/GoogleSans.ttf");
+}
+@font-face {
     font-family: "TASA Explorer";
     src: url("../public/TASAExplorer-VariableFont_wght.ttf");
 }
