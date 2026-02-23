@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+}
+
+section {
+  width: 100%;
+}

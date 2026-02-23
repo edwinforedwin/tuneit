@@ -1,0 +1,11 @@
+:host {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a2540 0%, #001f3f 100%);
+  font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+router-outlet {
+  display: block;
+}

@@ -1,0 +1,35 @@
+<section class="pricing">
+  <div class="pricing-container">
+    <div class="section-header">
+      <h2>Simple, Transparent Pricing</h2>
+      <p>Choose the perfect plan for your team</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div *ngFor="let plan of plans" 
+           class="pricing-card" 
+           [class.highlighted]="plan.highlighted">
+        <div class="ribbon" *ngIf="plan.highlighted">Popular</div>
+        
+        <h3 class="plan-name">{{ plan.name }}</h3>
+        <p class="plan-description">{{ plan.description }}</p>
+        
+        <div class="price-section">
+          <span class="price">{{ plan.price }}</span>
+          <span class="period">{{ plan.period }}</span>
+        </div>
+
+        <button class="btn-choose" [class.btn-primary]="plan.highlighted">
+          Choose Plan
+        </button>
+
+        <ul class="features-list">
+          <li *ngFor="let feature of plan.features">
+            <span class="checkmark">✓</span>
+            {{ feature }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

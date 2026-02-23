@@ -2,12 +2,56 @@
     font-family: "Google Sans";
     src: url("../public/GoogleSans.ttf");
 }
-@font-face {
-    font-family: "TASA Explorer";
-    src: url("../public/TASAExplorer-VariableFont_wght.ttf");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html body {
-    margin: 0;
-    height: 100vh;
-    width: 100%;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a2540 0%, #001f3f 100%);
+  color: #e0e7ff;
+  overflow-x: hidden;
+}
+
+app-root {
+  display: block;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(6, 182, 212, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  color: #0a2540;
 }

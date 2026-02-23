@@ -1,0 +1,16 @@
+<section class="features">
+  <div class="features-container">
+    <div class="section-header">
+      <h2>Why Choose TuneIt?</h2>
+      <p>Powerful features designed for modern development teams</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let feature of features">
+        <div class="feature-icon-large">{{ feature.icon }}</div>
+        <h3>{{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
