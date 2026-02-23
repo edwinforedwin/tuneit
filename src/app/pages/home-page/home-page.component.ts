@@ -29,4 +29,7 @@ export class HomePageComponent {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+  onLogin() {
+    window.location.href = '/login';
+  }
 }

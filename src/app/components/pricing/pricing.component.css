@@ -8,6 +8,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+button {
+  font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .section-header {
   text-align: center;

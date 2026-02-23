@@ -38,17 +38,17 @@ export class ContactComponent {
     {
       icon: '📧',
       title: 'Email',
-      value: 'support@tuneit.com'
+      value: 'support@tuneitapp.com'
     },
     {
       icon: '📞',
       title: 'Phone',
-      value: '+1 (800) 123-4567'
+      value: '+91 9497758671'
     },
     {
       icon: '📍',
       title: 'Address',
-      value: '123 Tech Street, San Francisco, CA 94105'
+      value: 'Aluva, Kerala, India'
     }
   ];
 }

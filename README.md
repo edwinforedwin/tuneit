@@ -16,7 +16,7 @@ TuneIt is a professional, sunny-themed project management and ticketing app buil
 
 ## 👤 Developer
 
-**Developed by:** *Edwin U Kannanaikkal*
+**Developed by:** *Edwin U Kannanaikkal (works.edwinuk@gmail.com)*
 
 Feel free to reach out for feedback, suggestions, or collaboration!
 
