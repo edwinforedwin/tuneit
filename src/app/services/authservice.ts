@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { initializeApp } from 'firebase/app';
-import { getAuth,signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth,sendPasswordResetEmail,signInWithEmailAndPassword } from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBkIvOanSvHj8bobBltvzb6F7od-suRIRc",
@@ -22,13 +22,21 @@ const auth = getAuth(app);
 export class Authservice {
   constructor(private router:Router){};
 
-  authService(email:string,password:string):any {
-    signInWithEmailAndPassword(auth,email,password).then((userCredential)=>{
-      const user = userCredential.user.email;
+  async authLogin(email: string, password: string): Promise<string | null> {
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
       this.router.navigateByUrl('/app/userhome');
-    }).catch((error)=>{
-      console.log(error);
-      alert("Invalid User");
-    })
+      return null;
+    } catch (error) {
+      return 'Invalid username or password';
+    }
+  }
+  async authSentEmail(email: string): Promise<string | null> {
+    try {
+      await sendPasswordResetEmail(auth, email);
+      return null;
+    } catch (error) {
+      return "User doesn't exist";
+    }
   }
 }

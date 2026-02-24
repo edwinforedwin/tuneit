@@ -79,6 +79,30 @@
   z-index: 2;
 }
 
+.login-card { position: relative; }
+
+.spinner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.7);
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgba(6,182,212,0.25);
+  border-top-color: rgba(6,182,212,1);
+  border-radius: 50%;
+  animation: spinner 0.85s linear infinite;
+}
+
+@keyframes spinner { to { transform: rotate(360deg); } }
+
 .logo {
   font-size: 1.25rem;
   color: #06b6d4;
@@ -182,6 +206,10 @@
   margin-top: 0.4rem;
   font-size: 0.95rem;
   text-align: center;
+}
+
+button,input{ 
+    font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @keyframes float { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-14px);} }

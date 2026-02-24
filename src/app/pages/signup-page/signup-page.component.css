@@ -16,5 +16,7 @@
 .login-footer{ display:flex; gap:0.5rem; justify-content:center; align-items:center; margin-top:0.6rem; color:#94a3b8; font-size:0.95rem; }
 .link-muted{ color:#475569; text-decoration:none; }
 .error{ color:#e53935; margin-top:0.4rem; font-size:0.95rem; text-align:center; }
-
+button,input{ 
+    font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 @media (max-width:900px){ .login-hero{ flex-direction:column; padding:2rem 1.25rem;} .hero-visual{ order:1; width:100%; padding:0 0 1rem 0;} .hero-content{ order:2; width:100%; display:flex; justify-content:center;} .login-card{ width:100%; max-width:520px;} .hero-image{ max-width:320px; } }

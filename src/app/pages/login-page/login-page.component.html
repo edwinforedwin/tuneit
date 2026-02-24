@@ -6,6 +6,9 @@
   </div>
   <div class="hero-content">
     <div class="login-card">
+      <div class="spinner-overlay" *ngIf="isLoading">
+        <div class="spinner" aria-hidden="true"></div>
+      </div>
       <div class="logo">TuneIt</div>
       <h3 class="card-title">Sign in to your account</h3>
       <p class="card-sub">Manage tasks, collaborate, and move faster.</p>
@@ -27,7 +30,10 @@
           </div>
         </div>
 
-        <button class="btn btn-primary login-btn" type="submit">Log in</button>
+        <button class="btn btn-primary login-btn" type="submit" [disabled]="isLoading">
+          <span *ngIf="!isLoading">Log in</span>
+          <span *ngIf="isLoading">Signing in...</span>
+        </button>
         <div class="error" *ngIf="loginError">{{ loginError }}</div>
       </form>
 
