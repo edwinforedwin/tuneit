@@ -9,3 +9,22 @@
 router-outlet {
   display: block;
 }
+
+/* route transition classes toggled on <app-root> */
+.route-exit > * {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.route-enter > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 320ms cubic-bezier(.2,.8,.2,1), transform 320ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* Ensure routed content starts visible by default */
+:host > * {
+  opacity: 1;
+  transform: translateY(0);
+}

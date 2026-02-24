@@ -1,23 +1,45 @@
-<div class="login-container">
-  <div class="login-card">
-    <h2>Welcome to TuneIt</h2>
-    <form (ngSubmit)="login()" autocomplete="off">
-      <div class="input-group">
-        <label for="username">Username</label>
-        <input id="username" name="username" [(ngModel)]="username" required autofocus />
-      </div>
-      <div class="input-group">
-        <label for="password">Password</label>
-        <div class="password-wrapper">
-          <input [type]="hidePassword ? 'password' : 'text'" id="password" name="password" [(ngModel)]="password" required />
-          <button type="button" class="toggle-password" (click)="hidePassword = !hidePassword" aria-label="Toggle password visibility">
-            <span *ngIf="hidePassword">👁️</span>
-            <span *ngIf="!hidePassword">🙈</span>
-          </button>
-        </div>
-      </div>
-      <button class="login-btn" type="submit">Login</button>
-      <div class="error" *ngIf="loginError">{{ loginError }}</div>
-    </form>
+<app-navbar></app-navbar>
+
+<section class="hero login-hero">
+  <div class="hero-visual">
+    <img src="/Fingerprint-bro.png" alt="Fingerprint illustration" class="hero-image" />
   </div>
-</div>
+  <div class="hero-content">
+    <div class="login-card">
+      <div class="logo">TuneIt</div>
+      <h3 class="card-title">Sign in to your account</h3>
+      <p class="card-sub">Manage tasks, collaborate, and move faster.</p>
+
+      <form (ngSubmit)="login()" autocomplete="off">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input id="username" name="username" [(ngModel)]="username" required autofocus />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input [type]="hidePassword ? 'password' : 'text'" id="password" name="password" [(ngModel)]="password" required />
+            <button type="button" class="toggle-password" (click)="hidePassword = !hidePassword" aria-label="Toggle password visibility">
+              <span *ngIf="hidePassword">👁️</span>
+              <span *ngIf="!hidePassword">🙈</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary login-btn" type="submit">Log in</button>
+        <div class="error" *ngIf="loginError">{{ loginError }}</div>
+      </form>
+
+      <div class="login-footer">
+        <a class="link-muted" [routerLink]="['/forgot-password']">Forgot password?</a>
+        <span>•</span>
+        <a class="link-muted" [routerLink]="['/signup']">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+<app-footer></app-footer>

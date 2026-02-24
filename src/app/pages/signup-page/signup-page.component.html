@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<section class="hero login-hero">
+  <div class="hero-visual">
+    <img src="/Fingerprint-bro.png" alt="Fingerprint illustration" class="hero-image" />
+  </div>
+  <div class="hero-content">
+    <div class="login-card">
+      <div class="logo">TuneIt</div>
+      <h3 class="card-title">Create your account</h3>
+      <p class="card-sub">Start using TuneIt to manage your team and tasks.</p>
+
+      <form (ngSubmit)="signup()" autocomplete="off">
+        <div class="input-group">
+          <label for="name">Full name</label>
+          <input id="name" name="name" [(ngModel)]="name" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" [(ngModel)]="email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" [(ngModel)]="password" required />
+        </div>
+
+        <div class="input-group">
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" name="confirm" type="password" [(ngModel)]="confirmPassword" required />
+        </div>
+
+        <button class="btn btn-primary login-btn" type="submit">Sign up</button>
+        <div class="error" *ngIf="signupError">{{ signupError }}</div>
+      </form>
+
+      <div class="login-footer">
+        <a class="link-muted" routerLink="/login">Already have an account? Log in</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
