@@ -1,0 +1,65 @@
+<div class="gantt-controls">
+  <div class="left">
+    <button (click)="zoom(0.8)">Zoom -</button>
+    <button (click)="zoom(1.25)">Zoom +</button>
+    <button (click)="resetZoom()">Reset</button>
+  </div>
+  <div class="right">Drag to pan • Wheel to zoom</div>
+</div>
+
+<div class="gantt-container" (pointerdown)="startPan($event)" (pointermove)="onPointerMove($event)" (pointerup)="endPan($event)" (pointercancel)="endPan($event)" (pointerleave)="onPointerLeave($event)">
+  <!-- hover indicator (vertical line + date) -->
+  <div class="gantt-hover" *ngIf="showHover" [style.left.px]="hoverX - 1">
+    <div class="hover-line"></div>
+    <div class="hover-label">{{ hoverDate }}</div>
+  </div>
+  <div class="gantt-inner" [style.width.px]="viewWidth" [style.height.px]="tickets.length * 48 + 160">
+    <div class="label-column" [style.width.px]="labelColumnWidth">
+      <div class="label-header">Your Tickets</div>
+      <ng-container *ngFor="let t of tickets; let idx = index">
+        <div class="label" [style.top.px]="(idx * 48 + 120)">{{t.id}} — {{t.title}}</div>
+      </ng-container>
+    </div>
+
+    <svg [attr.width]="chartWidth" [attr.height]="tickets.length * 48 + 160" class="gantt-svg">
+      <!-- month header (merged cells) -->
+      <g class="month-header">
+        <ng-container *ngFor="let m of monthSpans">
+          <rect [attr.x]="(m.start + offsetDays) * effectivePixelsPerDay" y="8" [attr.width]="m.span * effectivePixelsPerDay" height="24" fill="rgba(6,182,212,0.06)"></rect>
+          <text [attr.x]="(m.start + offsetDays) * effectivePixelsPerDay + (m.span * effectivePixelsPerDay)/2" y="26" class="month-label" text-anchor="middle">{{ m.label }}</text>
+        </ng-container>
+      </g>
+
+      <!-- separators: horizontal under month header + vertical marks at month boundaries -->
+      <g class="month-separators">
+        <!-- horizontal separator -->
+        <line class="month-sep-line" x1="0" [attr.x2]="chartWidth" y1="56" y2="56"></line>
+        <!-- vertical boundaries at each month start -->
+        <ng-container *ngFor="let m of monthSpans">
+          <line class="month-sep-vert" [attr.x1]="(m.start + offsetDays) * effectivePixelsPerDay" [attr.x2]="(m.start + offsetDays) * effectivePixelsPerDay" y1="8" [attr.y2]="tickets.length * 48 + 160"></line>
+        </ng-container>
+        <!-- right edge line -->
+        <line class="month-sep-vert" [attr.x1]="chartWidth" [attr.x2]="chartWidth" y1="8" [attr.y2]="tickets.length * 48 + 160"></line>
+      </g>
+
+      <!-- day columns -->
+      <g class="grid">
+        <ng-container *ngFor="let i of daysArray(); let idx = index">
+          <rect [attr.x]="(idx + offsetDays) * effectivePixelsPerDay" y="56" [attr.width]="effectivePixelsPerDay" [attr.height]="tickets.length * 48" [attr.fill]="idx % 2 ? 'rgba(255,255,255,0.01)' : 'transparent'"></rect>
+          <text [attr.x]="(idx + offsetDays) * effectivePixelsPerDay + effectivePixelsPerDay/2" y="72" class="day-label" text-anchor="middle">{{ dayNumber(idx) }}</text>
+        </ng-container>
+      </g>
+
+      <!-- tickets -->
+      <g class="tickets">
+        <ng-container *ngFor="let t of tickets; let idx = index">
+          <g [attr.transform]="'translate(0,' + (idx * 48 + 128) + ')'">
+            <rect class="ticket-bar" [attr.x]="(daysFromStart(t.start) + offsetDays) * effectivePixelsPerDay" y="6" [attr.width]="daysLength(t.start, t.end) * effectivePixelsPerDay" [attr.height]="20" [attr.fill]="t.color">
+              <title>{{t.id}}: {{t.title}} ({{t.start}} → {{t.end}})</title>
+            </rect>
+          </g>
+        </ng-container>
+      </g>
+    </svg>
+  </div>
+</div>

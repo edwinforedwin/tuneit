@@ -8,7 +8,7 @@
   min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 3rem 2rem;
   position: relative;
   overflow: hidden;
@@ -39,32 +39,13 @@
 }
 
 .hero-content {
-  flex: 0 0 50%;
-  max-width: 50%;
+  flex: 1 1 100%;
+  max-width: 480px;
   z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 1rem;
-}
-
-.hero-visual {
-  flex: 0 0 50%;
-  max-width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  padding: 1rem 1.5rem 1rem 0;
-}
-
-.hero-image {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  max-height: 420px;
-  object-fit: contain;
-  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.45));
+  padding: 0 1rem;
 }
 
 .login-card {
@@ -72,7 +53,8 @@
   border-radius: 16px;
   box-shadow: 0 14px 40px rgba(0,0,0,0.35);
   padding: 2rem;
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -218,6 +200,5 @@ button,input{
   .login-hero { flex-direction: column; padding: 2rem 1.25rem; }
   .hero-visual { order: 1; width: 100%; padding: 0 0 1rem 0; }
   .hero-content { order: 2; width: 100%; display:flex; justify-content:center; }
-  .login-card { width: 100%; max-width: 520px; }
-  .hero-image { max-width: 320px; }
+  .login-card { width: 100%; max-width: 420px; }
 }

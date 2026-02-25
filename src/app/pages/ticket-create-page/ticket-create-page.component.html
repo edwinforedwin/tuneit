@@ -1,0 +1,47 @@
+<section class="ticket-create ticket-page">
+  <div class="floating-card">
+    <h2>Create Ticket</h2>
+
+    <form (ngSubmit)="submit()" #f="ngForm" class="ticket-form-grid">
+      <div class="row">
+        <label class="col-label">Title</label>
+        <div class="col-field"><input name="title" [(ngModel)]="form.title" required /></div>
+      </div>
+
+      <div class="row">
+        <label class="col-label">Description</label>
+        <div class="col-field"><textarea name="description" [(ngModel)]="form.description"></textarea></div>
+      </div>
+
+      <div class="row">
+        <label class="col-label">Priority</label>
+        <div class="col-field">
+          <select name="priority" [(ngModel)]="form.priority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="col-label">Due date</label>
+        <div class="col-field"><input type="date" name="dueDate" [(ngModel)]="form.dueDate" /></div>
+      </div>
+
+      <div class="row">
+        <label class="col-label">Assignee</label>
+        <div class="col-field"><input name="assignee" [(ngModel)]="form.assignee" /></div>
+      </div>
+
+      <div class="row actions-row">
+        <div></div>
+        <div class="col-field">
+          <button class="btn-primary" type="submit" [disabled]="!form.title">Create Ticket</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Removed created tickets list per request -->
+  </div>
+</section>
