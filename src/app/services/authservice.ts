@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { initializeApp } from 'firebase/app';
 import { getAuth,sendPasswordResetEmail,signInWithEmailAndPassword } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBkIvOanSvHj8bobBltvzb6F7od-suRIRc",
-  authDomain: "tuneitapp-ed6b6.firebaseapp.com",
-  projectId: "tuneitapp-ed6b6",
-  storageBucket: "tuneitapp-ed6b6.firebasestorage.app",
-  messagingSenderId: "837236966162",
-  appId: "1:837236966162:web:e56febb9753777999529cb",
-  measurementId: "G-3767NQWZ9X"
+  apiKey: "FIREBASE_API_KEY",
+  authDomain: "FIREBASE_AUTH_DOMAIN",
+  projectId: "FIREBASE_PROJECT_ID",
+  storageBucket: "FIREBASE_STORAGE_BUCKET",
+  messagingSenderId: "FIREBASE_MESSAGING_SENDER_ID",
+  appId: "FIREBASE_APP_ID",
+  measurementId: "FIREBASE_MEASUREMENT_ID"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -20,7 +20,7 @@ const auth = getAuth(app);
   providedIn: 'root'
 })
 export class Authservice {
-  constructor(private router:Router){};
+  private router = inject(Router);
 
   async authLogin(email: string, password: string): Promise<string | null> {
     try {
