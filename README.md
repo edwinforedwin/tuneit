@@ -1,32 +1,29 @@
 
-# tuneItApp
+# TuneIt
 
-> **A modern developer ticketing & project management tool**
+> **A modern ticketing tool for teams**
 
 
-## 🚀 About the Application
+## 📑 About the Application
 
-TuneIt is a professional, sunny-themed project management and ticketing app built with Angular. It helps teams and developers organize, track, and collaborate on tasks with a beautiful, intuitive interface.
+TuneIt is a professional ticketing application built using Angular. It helps teams to organize, track, and collaborate on tasks without long UI battles of SaaS solutions.
 
-- 🏠 Home page with modern design
-- 🔒 Authentication & secure workflows
+- 🔐 Authentication & secure workflows
 - 📋 Feature-rich ticketing system
 - 💡 Modular, component-based architecture
 - 🌞 Warm, inviting UI
 
-## 👤 Developer
+## 😎 Maintainer
 
-**Developed by:** *Edwin U Kannanaikkal (works.edwinuk@gmail.com)*
+*  *Edwin U Kannanaikkal (works.edwinuk@gmail.com)*
 
 Feel free to reach out for feedback, suggestions, or collaboration!
-
----
 
 ## 🛠️ Getting Started
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/edwinforedwin/tuneit.git
 cd tuneit
 ```
 
@@ -39,14 +36,11 @@ npm install
 ```bash
 npm start
 ```
-Visit [http://localhost:4200](http://localhost:4200) in your browser.
-
-### 4. Run Tests
+or if you have Angular CLI
 ```bash
-npm test
+ng serve
 ```
-
----
+Visit [http://localhost:4200](http://localhost:4200) in your browser.
 
 ## 🤝 Contributing
 
