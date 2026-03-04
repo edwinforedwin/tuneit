@@ -18,8 +18,8 @@ html, body {
 
 body {
   font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #0a2540 0%, #001f3f 100%);
-  color: #e0e7ff;
+  background: linear-gradient(135deg, #f4fbfd 0%, #e6f7fb 50%, #ffffff 100%);
+  color: #06353a;
   overflow-x: hidden;
 }
 
@@ -52,6 +52,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
-  color: #0a2540;
+  background: linear-gradient(135deg, #60c9e6, #9fe8ff);
+  color: #062f3a;
 }

@@ -1,10 +1,10 @@
 
 :root{--topbar-grad:linear-gradient(135deg,#0a2540 0%,#003d5c 100%);}
 .user-root{height:100vh;display:flex;flex-direction:column;font-family:'Google Sans','Segoe UI',Tahoma,Arial}
-.topbar{position:relative;height:64px;background:var(--topbar-grad);color:#e0e7ff;display:flex;align-items:center;padding:0 16px;justify-content:space-between;border-bottom:1px solid rgba(6,182,212,0.15)}
+.topbar, .top-bar {position:relative;height:64px;background:var(--topbar-grad);background:linear-gradient(135deg,#0a2540 0%,#003d5c 100%) !important;color:#e0e7ff;display:flex;align-items:center;padding:0 16px;justify-content:space-between;border-bottom:1px solid rgba(6,182,212,0.15)}
 .topbar .left{display:flex;align-items:center;gap:12px}
 /* Center the brand visually while keeping left/right controls functional */
-.topbar .brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-weight:800;cursor:pointer;color:#06b6d4;font-size:22px;z-index:1;pointer-events:auto}
+.topbar .brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-weight:800;cursor:pointer;color:#e0e7ff;font-size:22px;z-index:1;pointer-events:auto}
 .topbar .menu-toggle{background:transparent;border:none;color:#e0e7ff;font-size:20px;cursor:pointer}
 .topbar .top-actions{display:flex;align-items:center;gap:8px}
 .topbar .nav-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#e0e7ff;padding:6px 10px;border-radius:6px;cursor:pointer}
@@ -15,18 +15,18 @@
 .logout-icon{display:inline-block;color:#04263a;opacity:0.95}
 .logout-label{display:inline-block}
 .layout{display:flex;flex:1;overflow:hidden}
-.sidebar{width:220px;background:transparent;color:#e5e7eb;padding:12px;transition:width .25s ease,transform .25s ease,background .25s ease;border-right:1px solid rgba(255,255,255,0.02);font-family:'Google Sans','Poppins',Segoe UI,Tahoma,Arial,sans-serif}
+.sidebar{width:220px;background:var(--topbar-grad);background:linear-gradient(135deg,#0a2540 0%,#003d5c 100%) !important;color:#e0e7ef;padding:12px;transition:width .25s ease,transform .25s ease,background .25s ease;border-right:1px solid rgba(6,182,212,0.12);font-family:'Google Sans','Poppins',Segoe UI,Tahoma,Arial,sans-serif}
 .sidebar.collapsed{width:64px}
 .sidebar nav ul{list-style:none;padding:0;margin:0}
 .sidebar nav li{margin:10px 0}
 .sidebar nav a{color:inherit;text-decoration:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:8px;border-radius:6px;font-family:inherit}
 .sidebar .icon{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:18px}
-.sidebar .icon svg{width:20px;height:20px;display:block;color:#9ca3af}
-.sidebar nav a:hover .icon svg{color:#06b6d4}
+.sidebar .icon svg{width:20px;height:20px;display:block;color:#cbd5e1}
+.sidebar nav a:hover .icon svg{color:#9fe8ff}
 .sidebar nav a:hover .label{color:#e0f2ff}
-.sidebar .label{white-space:nowrap;transition:opacity .18s ease .05s;font-weight:600;letter-spacing:0.1px}
+.sidebar .label{white-space:nowrap;transition:opacity .18s ease .05s;font-weight:600;letter-spacing:0.1px;color:#e0e7ff}
 .sidebar.collapsed .label{opacity:0;visibility:hidden;width:0;height:0}
-.main{flex:1;padding:24px;overflow:auto;background:transparent}
+.main{flex:1;padding:24px;overflow:auto;background: linear-gradient(135deg, #0a2540 0%, #001f3f 100%); color: #e0e7ff}
 
 @media (max-width: 800px){
 	.sidebar{position:relative;z-index:40}

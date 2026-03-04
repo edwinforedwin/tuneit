@@ -5,6 +5,8 @@
 
 main {
   min-height: 100vh;
+  /* match hero light background */
+  background: linear-gradient(135deg, #f4fbfd 0%, #e6f7fb 50%, #ffffff 100%);
 }
 
 section {

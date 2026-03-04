@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a2540 0%, #001f3f 100%);
+  background: linear-gradient(135deg, #f4fbfd 0%, #e6f7fb 50%, #ffffff 100%);
   font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 

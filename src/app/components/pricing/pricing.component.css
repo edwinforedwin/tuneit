@@ -1,5 +1,5 @@
 .pricing {
-  background: linear-gradient(135deg, #0a2540 0%, #0f3460 100%);
+  background: linear-gradient(135deg, #f4fbfd 0%, #e6f7fb 50%, #ffffff 100%);
   padding: 5rem 2rem;
   font-family: 'Google Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -19,14 +19,14 @@ button {
 
 .section-header h2 {
   font-size: 2.5rem;
-  color: #06b6d4;
+  color: #064e56;
   margin: 0 0 1rem 0;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .section-header p {
   font-size: 1.2rem;
-  color: #cbd5e1;
+  color: #385a60;
   margin: 0;
 }
 
@@ -38,13 +38,13 @@ button {
 }
 
 .pricing-card {
-  background: rgba(20, 184, 166, 0.05);
+  background: rgba(6,53,58,0.03);
   border-radius: 15px;
   padding: 2.5rem 2rem;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(6, 182, 212, 0.1);
-  transition: all 0.3s ease;
-  border: 2px solid rgba(6, 182, 212, 0.2);
+  box-shadow: 0 6px 24px rgba(6,46,51,0.04);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(3,47,51,0.06);
   position: relative;
 }
 
@@ -78,13 +78,13 @@ button {
 
 .plan-name {
   font-size: 1.5rem;
-  color: #06b6d4;
+  color: #064e56;
   margin: 1rem 0 0.5rem 0;
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .plan-description {
-  color: #cbd5e1;
+  color: #385a60;
   margin: 0 0 1.5rem 0;
   font-size: 0.95rem;
 }
@@ -147,8 +147,8 @@ button {
 
 .features-list li {
   padding: 0.75rem 0;
-  color: #ffffff;
-  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+  color: #000000;
+  border-bottom: 1px solid rgba(6, 182, 212, 0.12);
   font-size: 0.95rem;
 }
 
